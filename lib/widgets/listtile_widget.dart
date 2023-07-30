@@ -30,7 +30,7 @@ class ListTileWidget extends StatelessWidget {
         height: 100,
         child: ListTile(
           leading: Container(
-            width: 140,
+            width: 120,
             padding: const EdgeInsets.all(10),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
