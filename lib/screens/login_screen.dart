@@ -13,10 +13,11 @@ class LoginScreen extends StatelessWidget {
     return LayoutBuilder(
       builder: (ctx, constraints) {
         return Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Products'),
-      ),
+            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+            title: const Text('Products'),
+          ),
           body: Stack(
             children: [
               Container(
@@ -49,7 +50,8 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.4),
                         spreadRadius: 4,
                         blurRadius: 7,
-                        offset: const Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
@@ -96,11 +98,14 @@ class LoginScreen extends StatelessWidget {
                       ),
                       TextFieldWidget(
                           'Username', 'Your Name', usernameController),
-                      TextFieldWidget('Password', 'Password', passwordController),
+                      TextFieldWidget(
+                          'Password', 'Password', passwordController),
                       Center(
                         child: ElevatedButton(
-                          onPressed: () {Navigator.of(context)
-                                  .pushNamed(HomeScreen.routeName);},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed(HomeScreen.routeName);
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.orange,
                             elevation: 0,
@@ -146,9 +151,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           TextButton(
-                            onPressed: () {
-        
-                            },
+                            onPressed: () {},
                             child: const Text(
                               'Create Account',
                               style: TextStyle(
